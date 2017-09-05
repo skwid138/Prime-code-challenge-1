@@ -8,8 +8,9 @@ var onReady = function() {
   //Create a <button> element on the DOM, 
   // you may do this in jQuery, or write it directly in the HTML code. 
   // Have the button text read "Generate".
-  $('#create').on('click', generate)
-  $('#container').on('click', '.deleteButton', deleteDiv)
+  $('#create').on('click', generate);
+  $('#container').on('click', '.deleteButton', deleteDiv);
+  $('#container').on('click', '.swapButton', swapColor);
 };
 
 // creates a div
@@ -45,6 +46,19 @@ function deleteDiv () {
 // Clicking a "Delete" <button> should remove 
 // its parent <div> container (and all of its contents).
 $(this).parent().remove();
+}
+
+function swapColor ( ) {
+  console.log('called swapColor');
+  // Clicking a "Swap" < button > should change its parent background - color from Red to Yellow.
+  // Clicking a "Swap" <button> again should change its parent background-color from Yellow back to Red
+  if (!$(this).parent().hasClass('yellow')) {
+    $(this).parent().addClass('yellow');
+    $(this).parent().css('background-color', 'yellow');
+  } else {
+    console.log('else');
+    $(this).parent().switchClass('yellow','color-div');
+  }
 }
 
 // When the DOM is loaded, our code in the onReady function will run.
