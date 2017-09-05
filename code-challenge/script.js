@@ -9,7 +9,7 @@ var onReady = function() {
   // you may do this in jQuery, or write it directly in the HTML code. 
   // Have the button text read "Generate".
   $('#create').on('click', generate)
-  $('.container').on('click', '.deleteButton', deleteDiv)
+  $('#container').on('click', '.deleteButton', deleteDiv)
 };
 
 // creates a div
@@ -42,10 +42,9 @@ function generate ( ) {
 
 function deleteDiv () {
   console.log('called deleteDiv');
-  
 // Clicking a "Delete" <button> should remove 
 // its parent <div> container (and all of its contents).
-
+$(this).parent().remove();
 }
 
 // When the DOM is loaded, our code in the onReady function will run.
