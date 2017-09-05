@@ -56,8 +56,8 @@ function swapColor ( ) {
     $(this).parent().addClass('yellow');
     $(this).parent().css('background-color', 'yellow');
   } else {
-    console.log('else');
-    $(this).parent().switchClass('yellow','color-div');
+    $(this).parent().removeClass('yellow');
+    $(this).parent().css('background-color', 'red');
   }
 }
 
