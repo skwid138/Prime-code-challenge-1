@@ -22,14 +22,11 @@ function generate ( ) {
 
   // Inside the <div> element you created in the previous step, create a <p> element
   // that shows how many times you have clicked the button from the first step.
-  // $container.append('<div><p>' + numberOfClicks + '</p></div>');
   $div.append('<p>' + numberOfClicks + '</p>')
 
   // Inside the <div> element you created in step two, 
   // append two <button> elements. 
   // The text of the two buttons should read "Swap" and "Delete".
-  // $container.append('<button class="swapButton">Swap</button>');
-  // $container.append('<button class="deleteButton">Delete</button>');
   $div.append('<button class="swapButton">Swap</button>');
   $div.append('<button class="deleteButton">Delete</button>');
 
